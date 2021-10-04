@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Page</title>
+    <title>One Hundo</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,7 +36,7 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="app.html">The App</a>
+                        <a class="nav-link" href="app.html">One Hundo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Code.html">The Code</a>
@@ -55,14 +55,35 @@
     <!-- Main section -->
     <main id="content" class="flex-shrink-0">
         <div class="container">
-            <h1>App UI Here</h1>
-            <form>
-                <input id="message" type="text" placeholder="Enter A Message" required>
-                <button id="btnSubmit" type="button" class="btn btn-dark">Display Message</button>
-                <button id="btnSubmit2" type="button" class="btn btn-dark">Display Message 2</button>
-            </form>
-        </div>
-
+            <div class="row">
+                <div class="col">
+                    <h1>One Hundo: Count on me!</h1>
+                    <h4 class="lead">Counting, with a loop. Use Javascript to write a program that will count to 100 on
+                        the screen.</h4>
+                    <h2 class="mt-5 border-bottom border-3">Instructions</h2>
+                    <p>Enter any number from one to one hundred.</p>
+                </div>
+                <div class="col">
+                    <h5>Enter Values</h5>
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <input id="startValue" type="number" class="form-control" placeholder="Start Value"
+                                    value=0 aria-label="Start Value">
+                            </div>
+                            <div class="col">
+                                <input id="endValue" type="number" class="form-control" placeholder="End Value"
+                                    value=100 aria-label="End Value">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">HUNDO!</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h2 class="mt-5 border-bottom border-2">Results</h2>
+                    <p id="results"></p>
+                </div>
+            </div>
     </main>
 
     <!-- Footer Section -->
@@ -97,11 +118,9 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-    document.getElementById("btnSubmit").addEventListener("click", displayMessage);
+        document.getElementById("btnSubmit").addEventListener("click", displayHundo);
     </script>
-    <script>
-    document.getElementById("btnSubmit2").addEventListener("click", displayMessage2);
-    </script>
+
 
 </body>
 

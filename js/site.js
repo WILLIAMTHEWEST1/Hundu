@@ -1,18 +1,10 @@
 //displays a message to the user
-function displayMessage() {
+function displayHundo() {
+    let startValue = 0;
+    let endValue = 100;
 
-    let msg = "";
+    startValue = document.getElementById("startValue").value;
+    endValue = document.getElementById("endValue").value;
 
-    msg = document.getElementById("message").value;
-
-    alert(msg);
-}
-
-function displayMessage2() {
-
-let msg = "";
-
-msg = document.getElementById("message").value;
-
-Swal.fire(msg)
+    alert("Start Value =" + startValue + "End Value =" + endValue );
 }
