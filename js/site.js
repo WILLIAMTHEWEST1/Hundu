@@ -1,5 +1,5 @@
 //displays a message to the user
-function displayHundo() {
+function getNumbers() {
     let startValue = 0;
     let endValue = 100;
 
@@ -42,14 +42,20 @@ function displayNumbers(numbers) {
 
     let startValue = numbers[0];
     let endIndex = numbers.length;
-    let ptag = document.getElementById("results");
+    let tableBody = document.getElementById("results");
+    tableBody.innerHTML = "";
 
     for (let index = 0; index < endIndex; index++) {
-
-        //const element = array[index];
-
         let number = numbers[index];
-        ptag.innerHTML += number + " | ";
 
+        if (number % 2 == 0) {
+
+            tableRow = `<tr><td class="evenDisplay">${number}</td> </tr>`;
+
+        } else {
+            tableRow = `<tr><td>${number}</td></tr>`;
+        }
+            tableBody.innerHTML += tableRow;
     }
+
 }
